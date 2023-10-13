@@ -1,4 +1,8 @@
 import pandas as pd
+import asyncio
+import logging
+from aiogram import Bot, Dispatcher, types
+from aiogram.filters.command import Command
 #
 docxl = pd.read_excel("lab_pi_101.xlsx")
 count = docxl.shape[0]
@@ -13,3 +17,4 @@ print('В исходном датасете содержалось', count, 'о�
 "В датасете находятся оценки", countest, "студентов ПИ101 с следующими личными номерами:", ', '.join(map(str, uniqpi101)), "\n",
 "Используемые формы контроля:" , ', '.join(map(str, control)), "\n",
 "Данные представлены по следующим учебным годам:", ', '.join(map(str, year)))
+#
